@@ -39,5 +39,6 @@ Requirements:
     1. Login to the DockerHub Registry.
     1. Build and Push Docker image to your existing the DockerHub Registry with a tag of current's commit hash.
     1. Use the provided Dockerfile to build the image.
-5. Create a Pull Request with the changes.
-6. Pull Requests description should also contain a reference to a workflow run with successfull Docker CI job.
+5. Use GitHub Repository Secrets to store DockerHub credentials.
+6. Create a Pull Request with the changes.
+7. Pull Requests description should also contain a reference to a workflow run with successfull Docker CI job.
