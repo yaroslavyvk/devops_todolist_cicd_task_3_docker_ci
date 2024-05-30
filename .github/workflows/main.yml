@@ -47,7 +47,7 @@ jobs:
 
       - name: Check Complexity
         run: |
-          flake8 . --exit-zero --max-complexity=10 --statistics
+          flake8 . --exit-zero --max-complexity=6
 
       - name: Upload python artifacts
         uses: actions/upload-artifact@v4
