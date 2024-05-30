@@ -29,18 +29,13 @@ Now you can browse the [API](http://localhost:8000/api/) or start on the [landin
 
 ## Task
 
-Create a GitHub Actions workflow for this project. The workflow should:
+Extend a GitHub Actions workflow for this project with a Docker build and push to the DockerHub Registry.
+Docker CI Job Requirements:
 
-1. Run on every push to the `main` branch and pull requests to the `main` branch.
-2. Run name should contain information about user triggering the workflow.
-3. Run name should contain information about hash of the commit that triggering the workflow.
-4. Run should have a `python-ci` job with above steps:
-    1. step that runs the tests. (Tests are included in the app.)
-    1. step that generates a coverage with `coverage`
-    1. step that displays the coverage report in the console
-    1. step that checks the code style. (Code style is checked with `flake8`.) - this should not be a blocker for the workflow.
-    1. step that that checks complexity of the code. (Code complexity is checked with `flake8`.) - this should not be a blocker for the workflow.
-    1. step that uploads python code as an artifact
-    1. Python version should be controlled from the variable
-5. Create a PR to this repository with the changes.
-6. PR workflow should be triggered and should pass all the checks.
+1. Add `docker-ci` job to the workflow.
+2. Job should include the following steps:
+    1. Login to the DockerHub Registry.
+    1. Build and Push Docker image to your existing the DockerHub Registry with a tag of current's commit hash.
+    1. Use the provided Dockerfile to build the image.
+3. Create a Pull Request with the changes.
+4. Pull Requests description should also contain a reference to a workflow run with successfull Docker CI job.
