@@ -30,12 +30,14 @@ Now you can browse the [API](http://localhost:8000/api/) or start on the [landin
 ## Task
 
 Extend a GitHub Actions workflow for this project with a Docker build and push to the DockerHub Registry.
-Docker CI Job Requirements:
+Requirements:
 
-1. Add `docker-ci` job to the workflow.
-2. Job should include the following steps:
+1. Previous job's artifact upload - should be executed only from `main` branch.
+2. Add `docker-ci` job to the workflow.
+3. New job should be executed only from `main` branch.
+4. Job should include the following steps:
     1. Login to the DockerHub Registry.
     1. Build and Push Docker image to your existing the DockerHub Registry with a tag of current's commit hash.
     1. Use the provided Dockerfile to build the image.
-3. Create a Pull Request with the changes.
-4. Pull Requests description should also contain a reference to a workflow run with successfull Docker CI job.
+5. Create a Pull Request with the changes.
+6. Pull Requests description should also contain a reference to a workflow run with successfull Docker CI job.
