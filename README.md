@@ -41,4 +41,4 @@ The task is to extend a GitHub Actions workflow for this project by adding a Doc
     3. Use the provided Dockerfile to build the image.
 5. Store DockerHub credentials using GitHub Repository Secrets.
 6. Create a pull request with the changes.
-7. The description of the rull request should contain a reference to a workflow run with a successful Docker CI job.
+7. The description of the pull request should contain a reference to a workflow run with a successful Docker CI job.
