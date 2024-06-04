@@ -1,44 +1,44 @@
-# Django ToDo list
+# Django ToDo List Application
 
-This is a todo list web application with basic features of most web apps, i.e., accounts/login, API, and interactive UI. To do this task, you will need:
+This project is an advanced to-do list web application with the basic features of most web apps, such as accounts/login, API, and interactive UI. 
+To complete this task, you will need:
 
 - CSS | [Skeleton](http://getskeleton.com/)
 - JS  | [jQuery](https://jquery.com/)
 
-## Explore
+## Getting Started
 
-Try it out by installing the requirements (the following commands work only with Python 3.8 and higher, due to Django 4):
+To begin, install the necessary requirements. Please note that these commands are compatible with Python 3.8 and higher due to the use of Django 4:
 
 ```
 pip install -r requirements.txt
 ```
 
-Create a database schema:
+Next, create a database schema:
 
 ```
 python manage.py migrate
 ```
 
-And then start the server (default is <http://localhost:8000>):
+Finally, start the server (default is <http://localhost:8000>):
 
 ```
 python manage.py runserver
 ```
 
-Now you can browse the [API](http://localhost:8000/api/) or start on the [landing page](http://localhost:8000/).
+You can now explore the [API](http://localhost:8000/api/) or start on the [landing page](http://localhost:8000/).
 
-## Task
+## Task Description
 
-Extend a GitHub Actions workflow for this project with a Docker build and push to the DockerHub Registry.
-Requirements:
+The task is to extend a GitHub Actions workflow for this project by adding a Docker build and push to the DockerHub Registry. The requirements for this task are as follows:
 
-1. Previous job's artifact upload - should be executed only from `main` branch.
-2. Add `docker-ci` job to the workflow.
-3. New job should be executed only from `main` branch.
-4. Job should include the following steps:
+1. The upload of the previous job's artifact should only be executed from the `main` branch.
+2. Add a `docker-ci` job to the workflow.
+3. The new job should only be executed from the `main` branch.
+4. The job should include the following steps:
     1. Login to the DockerHub Registry.
-    1. Build and Push Docker image to your existing the DockerHub Registry with a tag of current's commit hash.
-    1. Use the provided Dockerfile to build the image.
-5. Use GitHub Repository Secrets to store DockerHub credentials.
-6. Create a Pull Request with the changes.
-7. Pull Requests description should also contain a reference to a workflow run with successfull Docker CI job.
+    2. Build and Push a Docker image to your existing DockerHub Registry. The image should be tagged with the current commit's hash.
+    3. Use the provided Dockerfile to build the image.
+5. Store DockerHub credentials using GitHub Repository Secrets.
+6. Create a pull request with the changes.
+7. The description of the rull request should contain a reference to a workflow run with a successful Docker CI job.
