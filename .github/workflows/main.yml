@@ -60,7 +60,6 @@ jobs:
   docker-ci:
     name: Build and Push Image
     needs: ['python-ci']
-    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v4
